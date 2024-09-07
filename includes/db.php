@@ -1,11 +1,11 @@
 <?php
-$servername = "mydocsvraz.mysql.database.azure.com"; // or your server name
-$username = "thirdstoat2@4.255.20.19"; // your database username
-$password = "Server@1"; // your database password
-$dbname = "document_collaboration"; // your database name
+$servername = "mydocsvraz.mysql.database.azure.com";
+$username = "thirdstoat2";
+$password = "Server@1";
+$dbname = "document_collaboration";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname, 3306, null, MYSQLI_CLIENT_SSL);
 
 // Check connection
 if ($conn->connect_error) {
