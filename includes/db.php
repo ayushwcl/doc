@@ -5,7 +5,7 @@ $password = "Server@1";
 $dbname = "document_collaboration";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname, 3306, null, MYSQLI_CLIENT_SSL);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
