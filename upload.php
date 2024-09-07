@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include 'includes/db.php';
 include 'includes/functions.php';
 check_login($conn);
@@ -57,4 +58,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['documents'])) {
         <button type="submit" class="btn btn-primary">Upload</button>
     </form>
 </main>
-<?php include 'includes/footer.php'; ?>
+<?php include 'includes/footer.php'; 
+ob_end_flush();
+?>
