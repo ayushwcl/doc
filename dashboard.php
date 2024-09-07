@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include 'includes/db.php';
 include 'includes/functions.php';
 check_login($conn);
@@ -12,4 +13,6 @@ check_login($conn);
         <a href="document.php" class="btn btn-secondary">View/Edit Documents</a>
     </div>
 </main>
-<?php include 'includes/footer.php'; ?>
+<?php include 'includes/footer.php'; 
+ob_end_flush();
+?>
