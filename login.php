@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = sanitize_input($_POST['username']);
     $password = sanitize_input($_POST['password']);
 
-    $sql = "SELECT * FROM users WHERE username = ? AND password = ?"
+    $sql = "SELECT * FROM users WHERE username = ? AND password = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('ss', $username, $password);
     $stmt->execute();
