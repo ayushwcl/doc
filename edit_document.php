@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include 'includes/db.php';
 include 'includes/functions.php';
 check_login($conn);
@@ -84,4 +85,6 @@ include 'includes/header.php';
     });
 </script>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'includes/footer.php';
+ob_end_flush();
+?>
