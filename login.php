@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include 'includes/db.php';
 include 'includes/functions.php';
 
@@ -14,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bind_param('ss', $username, $password);
     $stmt->execute();
     $result = $stmt->get_result();
-print_r($result);exit;
+
     if ($result->num_rows == 1) {
         $user = $result->fetch_assoc();
 
@@ -24,7 +25,7 @@ print_r($result);exit;
         $_SESSION['last_activity'] = time(); // Set last activity time
 
         // Redirect to dashboard
-        header("Location: dashboard.php");
+        header("location: dashboard.php");
         exit();
     } else {
         $error_message = "Invalid credentials";
@@ -47,4 +48,6 @@ print_r($result);exit;
         </form>
     </section>
 </main>
-<?php include 'includes/footer.php'; ?>
+<?php include 'includes/footer.php'; 
+ob_end_flush();
+?>
