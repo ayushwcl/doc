@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include 'includes/db.php';
 include 'includes/functions.php';
 
@@ -34,4 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </form>
     </section>
 </main>
-<?php include 'includes/footer.php'; ?>
+<?php include 'includes/footer.php'; 
+ob_start();
+?>
