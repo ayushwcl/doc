@@ -1,3 +1,5 @@
+
+<?php
 $servername = "mydocsvraz.mysql.database.azure.com";
 $username = "thirdstoat2";
 $password = "Server@1";
@@ -11,4 +13,4 @@ mysqli_real_connect($conn, $servername, $username, $password, $dbname, $port, NU
 if (mysqli_connect_errno()) {
     die("Connection failed: " . mysqli_connect_error());
 }
-
+?>
