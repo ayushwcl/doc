@@ -1,7 +1,7 @@
 <?php
 $servername = "mydocsvraz.mysql.database.azure.com"; // or your server name
 $username = "thirdstoat2"; // your database username
-$password = ""; // your database password
+$password = "Server@1"; // your database password
 $dbname = "document_collaboration"; // your database name
 
 // Create connection
