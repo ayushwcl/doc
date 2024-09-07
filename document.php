@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include 'includes/db.php';
 include 'includes/functions.php';
 check_login($conn);
@@ -75,4 +76,6 @@ function requires_download_button($file_path) {
         <p>No documents found.</p>
     <?php endif; ?>
 </main>
-<?php include 'includes/footer.php'; ?>
+<?php include 'includes/footer.php'; 
+ob_end_flush();
+?>
