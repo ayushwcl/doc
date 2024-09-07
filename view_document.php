@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include 'includes/db.php';
 include 'includes/functions.php';
 check_login($conn);
@@ -49,4 +50,5 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 } else {
     echo "Invalid document ID.";
 }
+ob_end_flush();
 ?>
